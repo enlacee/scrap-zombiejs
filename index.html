@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('footer').click(function(){
+          $("#content").append("<div class='my-data'>hello world</div>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="content">
+		<div class="login" style="border:1px solid red">
+			<form class="" action="privado.php" method="post">
+
+			email<br/>
+			<input type="text" name="email" id="email" value="" /><br/>
+			password<br/>
+			<input type="text" name="password" id="password" value="" /><br/>
+			<input type="submit" name="submit" id="submit" value="Submit" />
+			</form>
+		</div>
+      <footer>
+        <Copyright>Now Buddy Lindsey</Copyright>
+      </footer>
+    </div>
+  </body>
+</html>
