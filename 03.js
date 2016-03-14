@@ -1,33 +1,27 @@
-'use strict';
-// require ('jasmine-node')
-var Browser = require('zombie');
 
-Browser.localhost('localhost', 8000);
-const browser = new Browser();
+var Zombie = require('zombie');
+// var assert = require('assert');
 
-describe('User visits signup page', function() {
+//Browser.localhost('localhost', 8000);
+const browser = new Zombie();
+// Load the page from localhost
+browser.visit('http://localhost:8000/index.html', function() {
+	console.log('### titulo tag title? >> ', browser.text('title'));
+	console.log('INICIO');
+	console.log(browser.html());
+	// Fill email, password and submit form
+	browser.
+		fill('email', 'zombie@underworld.dead').
+		fill('password', 'eat-the-living').
+		pressButton('submit', function() {
+			// Form submitted, new page loaded.
+			// assert.equal(browser.text("title"), "privado");
+			// console.log('### titulo tag title? >> ', browser.text('title'));
+			console.log('FIN pagina2 1');
+			console.log(browser.html());
+			console.log('FIN pagina2 2');
+		});
 
-  const browser = new Browser();
 
-  before(function(done) {
-    browser.visit('/index.html', done);
-  });
 
-  describe('submits form', function() {
-
-    before(function(done) {
-      browser
-        .fill('email',    'zombie@underworld.dead')
-        .fill('password', 'eat-the-living')
-        .pressButton('Sign Me Up!', done);
-    });
-
-    it('should be successful', function() {
-      browser.assert.success();
-    });
-
-    it('should see welcome page', function() {
-      browser.assert.text('title', 'Welcome To Brains Depot');
-    });
-  });
 });
