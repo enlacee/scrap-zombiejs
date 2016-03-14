@@ -1,7 +1,9 @@
 
-npm install zombie --save-dev
-npm install superagent --save-dev
-npm install jasmine-node --save-dev
+Lista de packetes npm
+
+	npm install zombie --save-dev
+	npm install superagent --save-dev
+	npm install jasmine-node --save-dev
 
 ### instalar dependecias
 npm install
