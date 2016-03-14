@@ -13,7 +13,7 @@ browser.visit('http://localhost:8000/index.html', function() {
 	browser.
 		fill('email', 'zombie@underworld.dead').
 		fill('password', 'eat-the-living').
-		pressButton('submit', function() {
+		pressButton('login', function() {
 			// Form submitted, new page loaded.
 			// assert.equal(browser.text("title"), "privado");
 			// console.log('### titulo tag title? >> ', browser.text('title'));
